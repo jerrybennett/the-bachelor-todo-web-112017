@@ -9,7 +9,9 @@ end
 
 def get_contestant_name(data, occupation)
   data[0].each do |i|
-    if
+    if i["occupation"] == occupation
+      return i["name"]
+    end
   end
 end
 
