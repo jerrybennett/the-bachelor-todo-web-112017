@@ -42,8 +42,8 @@ end
 def get_average_age_for_season(data, season)
   ages = []
   data[season].each do |k, v|
-    ages << k["age"].to_i
+    ages << k["age"].to_f
   end
-  average_age = (ages.inject(&:+) / ages.size).to_f
+  average_age = (ages.inject(&:+) / ages.size)
   return average_age.ceil
 end
