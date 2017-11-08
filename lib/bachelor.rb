@@ -8,13 +8,13 @@ def get_first_name_of_season_winner(data, season)
 end
 
 def get_contestant_name(data, occupation)
-  if block_given?
+
     data[0].each do |i|
       if occupation == i["occupation"]
         i["name"]
       end
     end
-  end
+
 end
 
 def count_contestants_by_hometown(data, hometown)
