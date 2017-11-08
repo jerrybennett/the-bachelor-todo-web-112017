@@ -45,5 +45,5 @@ def get_average_age_for_season(data, season)
     ages << k["age"].to_f
   end
   average_age = (ages.inject(&:+) / ages.size)
-  return average_age.ceil
+  return average_age
 end
