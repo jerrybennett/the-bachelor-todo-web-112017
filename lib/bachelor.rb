@@ -10,8 +10,8 @@ end
 def get_contestant_name(data, occupation)
   if block_given?
     data[0].each do |i|
-      if occupation != nil && i["occupation"] == occupation
-        return i["name"]
+      if occupation == i["occupation"]
+        i["name"]
       end
     end
   end
