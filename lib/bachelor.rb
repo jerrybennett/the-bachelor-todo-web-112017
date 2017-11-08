@@ -40,9 +40,10 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  average_age = []
+  ages = []
   data[season].each do |k, v|
-    average_age << k["age"].to_i
+    age << k["age"].to_i
   end
-  return (average_age.inject(&:+) / average_age.length).ceil
+  average_age = (average_age.inject(&:+) / average_age.length).ceil
+  
 end
